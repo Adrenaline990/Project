@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="100000000000000000000">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');">
+    <title>MyP</title>
+</head>
+<style>
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: 0.2s linear;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+}
+body{
+    color:#1b1b1b;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+}
+section {
+    background-color: black;
+}
+header{
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 18px 100px;
+    top: 0;
+    right: 0;
+    align-items: center;
+    transition: all 30s linear;
+    background: #1b1b1b;
+    z-index: 99;
+}
+.logo-image{
+   width: 35px;
+}
+.nav{
+    display: flex;
+}
+.nav a{
+    padding: 8px 17px;
+    margin: 0 25px;
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.8s ease;
+    
+}
+.nav a:hover{
+    background-color: whitesmoke;
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+    color: #bc9667;
+}
+.login{
+    display: flex;
+    align-items: center;
+}
+.nav-btn{
+    display: inline-block;
+    padding: 10px 25px;
+    background: transparent;
+    border: 3px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.7s ease;
+    z-index: 99;
+}
+.nav-btn:hover{
+    color: #bc9667;
+    border: 3px solid #bc9667;
+}
+#menu-btn{
+    font-size: 22px;
+    cursor: pointer;;
+    column-gap: 0.8rem;
+    display: flex;
+    color: #fff;
+    margin-left: 25px;
+}
+#menu-btn:hover{
+    color: #bc9667;
+}
+section{
+    padding: 50px 100px;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.write{
+    flex: 1;
+}
+.image-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #bc9667;
+}
+.write h4{
+    font-size: 1.8rem;
+    color: white;
+}
+.write h2{
+    font-size: 4.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.write p{
+    font-size: 0.938rem;
+    color: #fff;
+    margin: 0.5rem 0 1.4rem;
+    word-spacing: 3px;
+    letter-spacing: 1.73px;
+    line-height: 23px;
+}
+.btn{
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background: #bc9667;
+    color: #fff;
+    font-weight: 500;
+}
+.btn:hover{
+    background: #1b1b1b;
+}
+.social-icons{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.social-icons a{
+    margin: 15px;
+    color: #fff;
+    font-size: 24px;
+    background: #bc9667;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+}
+.social-icons a:hover{
+    background: #1b1b1b;
+}
+.hi {
+    font-size: 0.938rem;
+    color: #fff;
+    margin: 0.1rem 0 1rem;
+    word-spacing: 2px;
+    letter-spacing: 1.73px;
+    line-height: 23px;
+    height: 800px;
+}
+.noidea {
+    text-align: center;
+    text-decoration: underline;
+}
+section {
+    background-color: black;
+    padding: 50px 100px;
+    border-bottom: 0.5px solid #fff;
+    height: 1px;
+}
+section:last-child {
+    border-bottom: none;
+}
+.PEX {
+    text-align:right;
+    justify-content: center
+}
+.exp-img img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+ul, ol {
+    list-style-type: square; /* Ajout du type square */
+    margin-left: 20px;
+}
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.exp-content p {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.slider {
+    width: 100%; /* Utiliser 100% pour que le slider prenne toute la largeur de son conteneur */
+    height: 500px; /* Uniformiser la hauteur des images */
+    overflow: hidden;
+    position: relative;
+}
+
+figure {
+    display: flex; /* Utilisation de flexbox pour aligner les images */
+    width: 400%; /* La largeur totale pour 4 images */
+    animation: 20s slide infinite; /* Délai d'animation ajusté pour que le défilement soit plus fluide */
+}
+
+.slide {
+    width: 25%; /* Chaque image occupe 25% de la largeur du conteneur */
+    flex-shrink: 0; /* Assure que les images ne se réduisent pas */
+}
+
+.slide img {
+    width: 100%;
+    height: 500px; /* Remplir le conteneur sans déformation */
+    object-fit: cover; /* Garantir que l'image couvre toute la zone sans être déformée */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Début à gauche */
+    }
+    25% {
+        transform: translateX(-25%); /* Déplacement à gauche */
+    }
+    50% {
+        transform: translateX(-50%); /* Deuxième image */
+    }
+    75% {
+        transform: translateX(-75%); /* Troisième image */
+    }
+    100% {
+        transform: translateX(0); /* Retour à la première image */
+    }
+}
+.rotate {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 1s;
+}
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+#education {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;  /* Espacement entre le texte et le slider */
+}
+
+.edu-content {
+    flex: 1;
+    font-size: 1.1rem;
+    color: white;
+    margin-right: 30px; /* Marge à droite pour espacer du slider */
+}
+
+.exp-img {
+    flex: 1;
+    width: 50%;  /* Le carrousel occupe 50% de l'espace disponible */
+}
+
+.exp-img slider figure {
+    display: flex;
+    width: 400%; /* La largeur totale pour 4 images */
+    animation: 20s slide infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.image-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #bc9667;
+}
+footer {
+    text-align: center;
+    margin-top: 50px;  
+    font-size: 0.9rem; 
+    color: #888;
+}
+</style>
+<body>
+    <!---PARTIE HEADER/MENU ET LOGIN--->
+    <header class="header">
+        <a class="logo">
+            <pre><img src="use.png" alt="logo" class="logo-image"></pre>
+
+        </a>
+        <ul class="nav">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#education">Éducation</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#demo">Démonstrations</a></li>
+            <li><a href="#more-info">Plus d'informations</a></li>
+
+        </ul>
+        <div class="login">
+            <a href="authentification.html" class="nav-btn">Login</a>
+        </div>
+
+    </header>
+    <!---PARTIE HOME--->
+    <section class="home" id="home">
+        <div class="write">
+            <h2>Mon Portfolio</h2>
+            <h4>Bonjour ! <br>Je m'appelle TMIMI Mohamed Taha</h4>
+            <br>
+            <p>Actuellement stagiaire en première année à l'ISGI<br> Très passionné par la création des sites et l'innovation<br>j'aime créer des sites web et en savoir plus sur le monde informatique</p>
+            <br>
+            <a href="#experience" class="btn">En savoir plus</a>
+        </div>
+        <div class="image-container">
+            <img src="me.png" alt="Ma photo">
+        </div>
+    </section>
+
+    <!---PARTIE EXPERIENCE--->
+    <section id="experience" class="experience hi">
+        <div class="exp-img slider">
+            <figure>
+                <div class="slide">
+                    <img src="stage.jpeg" alt="Ma photo" >
+                </div>
+                <div class="slide">
+                    <img src="godot.jpg" alt="idk" >
+                </div>
+                <div class="slide">
+                    <img src="ofppt.jpg" alt="Ma photo" >
+                </div>
+                <div class="slide">
+                    <img src="fs.jpg" alt="Ma photo" >
+                </div>
+            </figure>
+        </div>
+        <div class="exp-content">
+        <p class="PEX">J'ai effectué un stage d'observation en informatique <br> dans une entreprise de Janvier 2020 à Février 2020, <br> Je suis actuellement en pleine formation dans l'ISGI<br> Et d'ici 1 an et demi je serai développeur Full Stack<br>Etant jeune, j'ai travaillé sur un petit mini projet sur Godot Engine</p>
+        </div>
+    </section>
+     <!---PARTIE EDUCATION--->
+        <section id="education" class="hi home">
+        
+            <p>J'ai commencé le primaire à l'âge de 5 ans et fini en 2017<br> Puis entamé le collège à l'âge de 12 ans<br> Là où j'ai passé 3 ans puis obtenu mon brevet en 2020 <br> Puis est venu le lycée où j'y suis aussi passé 3 ans <br> Et j'ai obtenu mon bac en 2023 et suis stagiaire</p>
+
+     <div class="exp-img slider">
+        <figure>
+            <div class="slide">
+                <img src="primary.jpg" alt="Ma photo" >
+            </div>
+            <div class="slide">
+                <img src="collège.jpg" alt="idk" >
+            </div>
+            <div class="slide">
+                <img src="lycée.jpg" alt="Ma photo" >
+            </div>
+            <div class="slide">
+                <img src="ofppt.jpg" alt="Ma photo" >
+            </div>
+        </figure>
+    </div>
+</section>
+    <!---PARTIE SKILLS--->
+    <section id="skills" class="experience hi">
+        <div class="exp-img slider">
+            <figure>
+                <div class="slide">
+                    <img src="languages.jpg" alt="Ma photo" >
+                </div>
+                <div class="slide">
+                    <img src="office.jpg" alt="idk" >
+                </div>
+                <div class="slide">
+                    <img src="HCB.png" alt="Ma photo" >
+                </div>
+                <div class="slide">
+                    <img src="python.jpg" alt="Ma photo" >
+                </div>
+            </figure>
+        </div>
+        <ol type="circle">
+            <li class="PEX"><strong>Compétences:</strong></li><br>
+            <li class="PEX">Maitrise de la langue française</li>
+            <li class="PEX">Maitrise de la langue anglaise</li>
+            <li class="PEX">Maitrise de <strong>Word</strong>, <strong>Powerpoint</strong></li>
+            <li class="PEX">Quelques connaissances en <strong>HTML</strong>, <strong>CSS</strong> et <strong>Bootstrap</strong> un peu d'<strong>Excel</strong></li>
+            <li class="PEX">Quelques connaissances en <strong>Python</strong></li>
+            <li class="PEX">Quelques connaissances en montage vidéo</li>
+        </ol>
+    </section>
+    <!---PARTIE DEMO--->
+    <section id="demo" class="hi">
+        <h1 class="noidea">Démonstrations</h1><br><br><br><br>
+        <p>Quelques démonstrations de ce que je peux faire:</p>
+        <figure2>
+            <video width="640" height="360" controls>
+                <source src="enregistrement.mp4" type="video/mp4">
+            </video>
+            <video width="640" height="360" controls>
+                <source src="enregistrement2.mp4" type="video/mp4">
+            </video>
+        </figure2>
+    </section>
+    
+    <!---PARTIE PLUS D'INFO--->
+    <section id="more-info" class="experience hi">
+        <div class="exp-img slider">
+            <figure>
+                <div class="slide">
+                    <img src="gaming.jpg" alt="Ma photo" >
+                </div>
+                <div class="slide">
+                    <img src="basket.jpg" alt="idk" >
+                </div>
+                <div class="slide">
+                    <img src="travelling.jpg" alt="Ma photo" >
+                </div>
+                <div class="slide">
+                    <img src="reading.jpg" alt="Ma photo" >
+                </div>
+            </figure>
+        </div>
+        <ul type="square" class="PEX">Mes passe-temps:
+            <li class="PEX">Gaming - Mon passe-temps n°1, j'adore jouer aux jeux</li>
+            <li class="PEX">Basketball - J'aime jouer au Basketball de temps en temps pour destresser</li>
+            <li class="PEX">Voyages - Le voyage est un besoin vital pour moi pour me changer les idées</li>
+            <li class="PEX">Lecture - Lire des livres, des articles, ou des revues sur divers sujets    </li>
+        </ul>
+    </section>
+    <footer>
+        <p>Les images utilisées dans ce site (à part la première) ne sont pas les miennes.</p>
+    </footer>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</body>
+</html>
+
+<!--
+function Verif($MotPasse): bool 
+echo "La taille de ce mot de passe: ".strlen(string: $MotPasse)."<br>";
+-->
